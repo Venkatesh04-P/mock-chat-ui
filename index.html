@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Chat UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand">
+          <div class="brand-icon">💬</div>
+          <div>
+            <h1>ChatBox</h1>
+            <span>Messages</span>
+          </div>
+        </div>
+        <button class="icon-btn" id="newChatBtn" title="New chat">＋</button>
+      </div>
+
+      <div class="search-box">
+        <span>⌕</span>
+        <input type="text" id="searchInput" placeholder="Search conversations">
+      </div>
+
+      <div class="conversation-list" id="conversationList"></div>
+    </aside>
+
+    <main class="chat-panel">
+      <header class="chat-header">
+        <div class="contact-info">
+          <div class="avatar" id="headerAvatar">A</div>
+          <div>
+            <h2 id="headerName">Alex Johnson</h2>
+            <p id="headerStatus">Online</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button class="icon-btn" title="Call">☎</button>
+          <button class="icon-btn" title="More">⋮</button>
+        </div>
+      </header>
+
+      <section class="message-thread" id="messageThread" aria-live="polite"></section>
+
+      <form class="message-form" id="messageForm">
+        <button type="button" class="attach-btn" title="Attachment">＋</button>
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Type a message..."
+          autocomplete="off"
+          required
+        >
+        <button type="submit" class="send-btn">Send ➤</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
